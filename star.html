@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0px; padding: 0px;}
+        html , body {
+            height: 100%;
+            background-color: black;
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        .myStars {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="printArea"></div>
+    <script>
+        let printArea = document.getElementById("printArea");
+        function posY(){
+            return Math.floor(Math.random()*(101));
+        }
+        function posX(){
+            return Math.floor(Math.random()*(101));
+        }
+        function fontSize(){
+            return Math.floor(Math.random()*(91) + 10);
+        }
+        function sColor(){
+            return Math.floor(Math.random()*(256));
+        }
+        let totalS = "";
+        let i = 0;
+        while(i < 1000){
+            let starS = '<p class="myStars" style="';
+            starS += 'top: ' + posY() + '%;';
+            starS += 'left: ' + posX() + '%;';
+            starS += 'font-size: ' + fontSize() + 'px;';
+            starS += 'color: rgb(' + sColor() + ',' + sColor() + ',' + sColor() + ');';
+            starS += '">*</p>';
+            totalS += starS
+            i++;
+        }
+        printArea.innerHTML = totalS;
+    </script>
+</body>
+</html>
