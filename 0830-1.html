@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <style>
+        * {margin: 0px; padding: 0px;}
+        .stringBox {
+            width: 190px;
+            height: 190px;
+            border: 5px solid red;
+            overflow: hidden;
+        }
+        .inputString {
+            font-size: 150px;
+            line-height: 190px;
+        }
+        .pushBtn {
+            width: 40px;
+            height: 40px;
+            float: left;
+            border: 5px solid red;
+            display: inline-block;
+            font-size: 40px;
+            line-height: 40px;
+        }
+        .pushBtn:hover {
+            cursor: pointer;
+            background-color: lightgray;
+        }
+        .allBox {
+            width: 200px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="allBox">
+        <div class="stringBox">
+            <p id="inputString" class="inputString">&nbsp;&nbsp;&nbsp;&nbsp;zardzardzardzardzardzardzardzardzardzard</p>
+        </div>
+        <div id="leftBtn" class="pushBtn xi-angle-left"></div>
+		<div id="rightBtn" class="pushBtn xi-angle-right"></div>
+		<div id="upBtn" class="pushBtn xi-angle-up"></div>
+		<div id="downBtn" class="pushBtn xi-angle-down"></div>
+		<div id="pauseBtn" class="pushBtn xi-pause"></div>
+    </div>
+    <script>
+        let inputString = document.getElementById("inputString");
+        let leftBtn = document.getElementById("leftBtn");
+        let rightBtn = document.getElementById("rightBtn");
+        let upBtn = document.getElementById("upBtn");
+        let downBtn = document.getElementById("downBtn");
+        let pauseBtn = document.getElementById("pauseBtn");
+        let posX = 0;
+        let posY = 0;
+        let leftBtnArr = []
+        let rightBtnArr = []
+        let upBtnArr = []
+        let downBtnArr = []
+        let tempNum = 0;
+        function leftMoveString(){
+            inputString.style.marginLeft = posX-- + "px";
+        }
+        function rightMoveString(){
+            inputString.style.marginLeft = posX++ + "px";
+        }
+        function upMoveString(){
+            inputString.style.marginTop = posY-- + "px";
+        }
+        function downMoveString(){
+            inputString.style.marginTop = posY++ + "px";
+        }
+        function pauseMove(){
+            clearInterval(leftBtnArr.pop());
+            clearInterval(rightBtnArr.pop());
+            clearInterval(upBtnArr.pop());
+            clearInterval(downBtnArr.pop());
+        }
+        leftBtn.onclick = function(){
+            clearInterval(rightBtnArr);
+            clearInterval(upBtnArr);
+            clearInterval(downBtnArr);
+            leftBtnArr[tempNum] = setInterval("leftMoveString()",10);
+        }
+        rightBtn.onclick = function(){
+            clearInterval(leftBtnArr);
+            clearInterval(upBtnArr);
+            clearInterval(downBtnArr);
+            rightBtnArr[tempNum] = setInterval("rightMoveString()",10);
+        }
+        upBtn.onclick = function(){
+            clearInterval(leftBtnArr);
+            clearInterval(rightBtnArr);
+            clearInterval(downBtnArr);
+            upBtnArr[tempNum] = setInterval("upMoveString()",10);
+        }
+        downBtn.onclick = function(){
+            clearInterval(leftBtnArr);
+            clearInterval(rightBtnArr);
+            clearInterval(upBtnArr);
+            downBtnArr[tempNum] = setInterval("downMoveString()",10);
+        }
+        pauseBtn.onclick = function(){
+            pauseMove();
+        }
+    </script>
+</body>
+</html>
