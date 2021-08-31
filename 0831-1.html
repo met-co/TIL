@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0px; padding: 0px;}
+        .showArea {
+            width: 500px;
+            height: 500px;
+            background-image: url("http://fact119.com/zard/images1.jpg");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            position: relative;
+        }
+        .btnArea {
+            width: 100px;
+            height: 500px;
+            background-color: pink;
+            line-height: 500px;
+            font-size: 100px;
+        }
+        .showArea, .btnArea {
+            display: inline-block;
+            float: left;
+        }
+        .btnArea:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainBox">
+        <p id="prevBtn" class="btnArea">&lt</p>
+        <div id="showArea" class="showArea"></div>
+        <p id="nextBtn" class="btnArea">&gt</p>
+    </div>
+    <script>
+        const imgList = [
+            "http://fact119.com/zard/images1.jpg",
+			"http://fact119.com/zard/images2.jpg",
+			"http://fact119.com/zard/images3.jpg"
+        ];
+        let prevBtn = document.getElementById("prevBtn");
+        let nextBtn = document.getElementById("nextBtn");
+        prevBtn.onclick = function(){
+            let showArea = document.getElementById("showArea");
+            let tempImg = imgList.shift();
+            imgList.push(tempImg);
+            showArea.style.backgroundImage = 'url("' + imgList[0] + '")';
+        }
+        nextBtn.onclick = function(){
+            let tempImg = imgList.pop();
+            imgList.unshift(tempImg);
+            showArea.style.backgroundImage = 'url("' + imgList[0] + '")';
+        }
+    </script>
+</body>
+</html>
