@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0px; padding: 0px;}
+        .myCounter {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: pink;
+        }
+        .startBtn {
+            width: 50px;
+            height: 50px;
+        }
+        .stopBtn {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myCounter" class="myCounter"></div>
+    <button id="startBtn" class="startBtn">START</button>
+    <button id="stopBtn" class="stopBtn">STOP</button>
+    
+    <script>
+        let startBtn = document.getElementById("startBtn");
+        let stopBtn = document.getElementById("stopBtn");
+        let eventCount = null;
+        let eventHeight = 100;
+        let eventWidth = 100;
+        function startCount(){
+            let myCounter = document.getElementById("myCounter");
+            eventHeight++;
+            eventWidth++;
+            myCounter.style.width = eventWidth + "px";
+            myCounter.style.height = eventHeight + "px";
+        }
+        startBtn.onclick = function(){
+            eventCount = setInterval("startCount()",50);
+        }
+        stopBtn.onclick = function(){
+            clearInterval(eventCount);
+        }
+    </script>
+</body>
+</html>
