@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<style>
+			* {margin: 0px; padding: 0px;}
+			.input_box, .push_result {
+				width: 100px;
+				height: 40px;
+				background-color: pink;
+				color: white;
+				font-size: 25px;
+				text-align: center;
+				line-height: 40px;
+			}
+			.result_box {
+				background-color: lightgray;
+				cursor: pointer;
+			}
+			.push_result:hover{
+				background-color: lightgray;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<input id="input_1" class="input_box" type="text" value="0">
+		<input id="input_2" class="input_box" type="text" value="0">
+		<input id="input_3" class="input_box" type="text" value="0">
+		<input id="result_value" class="input_box result_box" type="text" value="0">
+		<p id="push_result" class="push_result">average</p>
+
+		<script>
+			var push_result = document.getElementById("push_result");
+			push_result.onclick = function(){
+				var input_1 = Number(document.getElementById("input_1").value);
+				var input_2 = Number(document.getElementById("input_2").value);
+				var input_3 = Number(document.getElementById("input_3").value);
+				var result_value = document.getElementById("result_value");
+				result_value.value = (input_1 + input_2 + input_3) / 3;
+			}
+		</script>
+	</body>
+</html>
