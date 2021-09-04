@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>TODO LIST</h1>
+    </header>
+    <main>
+        <div>
+            <input type="text" id="inputList" placeholder="내용을 입력하세요">
+            <button onclick = "addBtn()">add</button>
+        </div>
+        <div id="makeList">
+        </div>
+    </main>
+    <script>
+        function addBtn(){
+            let inputList = document.getElementById("inputList").value;
+            let makeList = document.getElementById("makeList");
+            let addList = "";
+            addList += '<ul>';
+            addList += '<li>';
+            addList += '<input type="checkbox">';
+            addList += inputList;
+            addList += '<button onclick="removeBtn(this)">x</button>';
+            addList += '</li>';
+            addList += '</ul>';
+            makeList.innerHTML += addList;
+        }
+
+        function removeBtn(rm){
+            rm.parentNode.remove();
+        }
+    </script>
+</body>
+</html>
