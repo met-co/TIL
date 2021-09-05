@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        let obj = {"a_a" : [100,200,300] , "a_b" : [400,500,600,700], "a_c" : [800,900]};
+        //출력
+        // a_a - 100/200/300
+        // a_b - 400/500/600/700
+        // a_c - 800/900
+        $.each(obj, function(index, item){
+            let result = "";
+            result += index + ' - ';
+            $.each(item, function(i,value){
+                result += value;
+                if(i < item.length - 1){
+                    result += '/';
+                }
+            })
+            result += "<br>";
+            document.write(result);
+        })
+    </script>
+</body>
+</html>
