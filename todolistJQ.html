@@ -23,12 +23,11 @@
         function addBtn(){
             let inputList = $("#inputList").val();
             let makeList = $("#makeList");
-            let addList = $('<ul>')
-            .append($('<li>'))
+            let addList = $('<ui>')
+            .append($('<li>')
             .append('<input type="checkbox">')
             .append(inputList)
-            .append('<button onclick="removeBtn(this)">x</button>')
-            
+            .append('<button onclick="removeBtn(this)">x</button>'))
             makeList.append(addList);
         }
 
