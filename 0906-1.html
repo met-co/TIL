@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputBox {
+				width: 100px;
+				height: 40px;
+				background-color: pink;
+				color: white;
+				font-size: 25px;
+				text-align: center;
+				line-height: 40px;
+                cursor: pointer;
+			}
+			.pushResult {
+				width: 50px;
+				height: 50px;
+				background-color: lightgray;
+				color: white;
+				font-size: 25px;
+				text-align: center;
+				line-height: 50px;
+				border-radius: 50%;
+				display: inline-block;
+			}
+			.pushResult:hover{
+				background-color: red;
+				cursor: pointer;
+			}
+            .resultValue {
+                width: 100px;
+				height: 40px;
+                border: 2px solid black;
+				background-color: pink;
+				color: white;
+				font-size: 25px;
+				text-align: center;
+				line-height: 40px;
+                display: inline-block;
+            }
+    </style>
+</head>
+<body>
+    <input id="input1" class="inputBox" type="text" value="0">
+    <div id="pushResult" class="pushResult">길이</div>
+    <div id="resultValue" class="resultValue"></div>
+
+    <script>
+        let pushResult = document.getElementById("pushResult");
+        pushResult.onclick = function(){
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("resultValue");
+            let myArr = [];
+            i = 0;
+            while(i < input1.length){
+                myArr.push(input1);
+                i++;
+            }
+            resultValue.innerHTML = myArr.length;
+        }
+    </script>
+</body>
+</html>
