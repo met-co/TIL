@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>TODO LIST</h1>
+    </header>
+    <main>
+        <div>
+            <input type="text" onkeydown="inputkey(event)" id="inputTxt" placeholder="내용을 입력하세요" autofocus>
+            <button onclick = "addBtn()">add</button>
+        </div>
+        <div>
+            <ul id="addList">
+            </ul>
+        </div>
+    </main>
+    <script>
+        function inputkey(event){
+            console.log(event);
+            if(event.keyCode == 13){
+                addBtn();
+            }
+        }
+        
+        function addBtn(){
+            
+            let inputTxt = $("#inputTxt");
+            if(inputTxt.val() == ""){
+                alert("내용을 입력하세요");
+                return;
+            }
+            let addList = $("#addList");
+            let makeList = $('<li>')
+                .append('<input type="checkbox" onclick="cBoxChecked(this)">')
+                .append(inputTxt.val())
+                .append('<button onclick="deleteBtn(this)">X</button>')
+                addList.append(makeList);
+                inputTxt.val("");
+        }
+
+        function cBoxChecked(cBox){
+            $(cBox).parent().css("textDecoration" , (cBox.checked ? "line-through" : "none"));
+        }
+
+
+        function deleteBtn(rm){
+            $(rm).parent().remove();
+        }
+    </script>
+</body>
+</html>
