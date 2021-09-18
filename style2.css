@@ -1,0 +1,36 @@
+ul,
+li {
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__img {
+  width: 50px;
+  height: 50px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo h2 {
+  padding-left: 10px;
+}
+
+.menu > ul {
+  display: flex;
+}
+.menu li {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 30px;
+}
+
+.menu i {
+  padding-right: 10px;
+}
