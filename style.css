@@ -17,98 +17,87 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 input,select{vertical-align:middle}
 
 * {margin: 0px; padding: 0px;}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 ul, li {
     list-style: none;
 }
 
 header {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-.mainLogo {
-    display: flex;
-    margin-top: 20px;
+    justify-content: space-between;
 }
 
-.logoImg {
-    width: 50px;
-    height: 50px;
-}
-
-.menuSection > ul{
+.leftMenu {
     display: flex;
 }
-.menuSection li {
-    font-size: 15px;
+
+
+.logoBox{
+    width: 120px;
+    font-size: 17px;
     font-weight: bold;
-    margin: 20px;
+    padding-right: 10px;
+    margin-top: 35px;
 }
 
-.menuSection i {
-    padding-left: 10px;
+
+.menuList {
+    margin-top: 35px;
 }
-.searchSection > ul {
+
+
+.menuList ul{
     display: flex;
 }
 
-.searchSection li {
-    font-size: 15px;
-    font-weight: bold;
+.menuList li {
+    margin-left: 20px;
 }
 
-.searchIcon {
-    margin: 20px;
+
+
+.rightMenu ul{
+    display: flex;
+    margin-top: 35px;
+    
 }
 
-.signIn {
-    margin: 20px;
+.rightMenu li {
+    margin-left: 20px;
+    
 }
-.talkBox {
-    margin: 5px;
-    color: rgb(82, 4, 116);
-    border: 1px solid rgb(82, 4, 116);
-    border-radius: 5px;
-    width: 140px;
-    height: 40px;
-    line-height: 40px;
+
+
+.countNum {
+    margin-left: 10px;
+    margin-top: -8px;
+    width: 30px;
+    height: 30px;
+    background: rgb(233, 232, 232);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    line-height: 30px;
     text-align: center;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
-.freeBox {
-    margin-top: 5px;
-    margin-left: 13px;
-    color: white;
-    background: rgb(82, 4, 116);
-    border: 1px solid rgb(82, 4, 116);
-    border-radius: 5px;
-    width: 130px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+@media all and (max-width:1050px){
+    #leftMenu ul {
+        display: none;
+    }
 }
 
-
-
-@media all and (max-width:1084px){
-    #menuSection > ul{
-        display: none;
-    }
-    #searchSection > ul > :nth-child(2) {
-        display: none;
-    }
-    #searchSection > ul > :nth-child(3) {
-        display: none;
-    }
-    #searchSection > ul > :nth-child(4) {
+@media all and (max-width:801px){
+    #rightMenu  ul {
         display: none;
     }
 }
