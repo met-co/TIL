@@ -1,0 +1,114 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+* {margin: 0px; padding: 0px;}
+ul, li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.mainLogo {
+    display: flex;
+    margin-top: 20px;
+}
+
+.logoImg {
+    width: 50px;
+    height: 50px;
+}
+
+.menuSection > ul{
+    display: flex;
+}
+.menuSection li {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.menuSection i {
+    padding-left: 10px;
+}
+.searchSection > ul {
+    display: flex;
+}
+
+.searchSection li {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.searchIcon {
+    margin: 20px;
+}
+
+.signIn {
+    margin: 20px;
+}
+.talkBox {
+    margin: 5px;
+    color: rgb(82, 4, 116);
+    border: 1px solid rgb(82, 4, 116);
+    border-radius: 5px;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.freeBox {
+    margin-top: 5px;
+    margin-left: 13px;
+    color: white;
+    background: rgb(82, 4, 116);
+    border: 1px solid rgb(82, 4, 116);
+    border-radius: 5px;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+
+@media all and (max-width:1084px){
+    #menuSection > ul{
+        display: none;
+    }
+    #searchSection > ul > :nth-child(2) {
+        display: none;
+    }
+    #searchSection > ul > :nth-child(3) {
+        display: none;
+    }
+    #searchSection > ul > :nth-child(4) {
+        display: none;
+    }
+}
