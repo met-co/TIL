@@ -1,66 +1,46 @@
-* {
-    margin: 0px; padding: 0px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
+* {margin: 0px; padding: 0px;}
 ul, li {
     list-style: none;
 }
+
 body {
-    background: rgb(250, 219, 224);
+    background: rgb(56, 56, 56);
 }
 header {
-    width: 95%;
-    height: 90px;
+    width: 90%;
     margin: 0 auto;
-    margin-top: 25px;
     display: flex;
     justify-content: space-between;
-    z-index: 1000;
-    background:  white;
+    border-bottom: 1px solid white;
 }
 
-.logoBox {
+.logoSection {
     display: flex;
-    align-items: center;
-    width: 150px;
-    height: 60px;
+    font-size: 30px;
+    color : white;
+    margin-top: 35px;
+    font-weight: bold;
+}
+
+.menuSection ul {
+    display: flex;
+    font-size: 15px;
+    color: white;
+    margin-top: 40px;
     
 }
-.logoImg {
-    display: flex;
-    margin-top: 35px;
-    width: 150px;
-    height: 60px;
-    margin-left: 50px;
-    line-height: 60px;
-    text-align: center;
+
+.menuSection li {
+    margin-right: 50px;
 }
 
-.menuBox {
-    display: flex;
-}
-
-.menuBox ul {
-    display: flex;
-}
-
-.menuBox li {
-    height: 50px;
-    margin-right: 40px;
-    margin-top: 40px;
-}
-
-.menuBox li:hover {
+.menuSection li:hover {
     cursor: pointer;
-    border-bottom: 3px solid pink;
+    color: pink;
 }
 
-@media all and (max-width:1025px){
-    #menuBox {
+@media all and (max-width:1000px){
+    #menuSection ul {
         display: none;
     }
 }
