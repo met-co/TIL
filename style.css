@@ -1,46 +1,61 @@
 * {margin: 0px; padding: 0px;}
-ul, li {
+ul , li {
     list-style: none;
 }
 
-body {
-    background: rgb(56, 56, 56);
-}
 header {
     width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid white;
 }
 
+
 .logoSection {
-    display: flex;
-    font-size: 30px;
-    color : white;
     margin-top: 35px;
-    font-weight: bold;
 }
 
 .menuSection ul {
+    margin-top: 50px;
     display: flex;
-    font-size: 15px;
-    color: white;
-    margin-top: 40px;
-    
+    border-right: 1px solid lightgray;
 }
 
 .menuSection li {
     margin-right: 50px;
+    font-size: 20px;
 }
 
 .menuSection li:hover {
-    cursor: pointer;
-    color: pink;
+    font-weight: bold;
+}
+.accountSection ul {
+    display: flex;
 }
 
-@media all and (max-width:1000px){
-    #menuSection ul {
+.accountSection li {
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.signUp {
+    margin-top: 40px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #f47825;
+    color: white;
+}
+
+.myAccount {
+    margin-top: 50px;
+    color: #1f6099;
+}
+
+
+@media all and (max-width:1240px){
+    #menuSection , #accountSection {
         display: none;
     }
 }
