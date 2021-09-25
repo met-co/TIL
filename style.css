@@ -1,61 +1,81 @@
 * {margin: 0px; padding: 0px;}
-ul , li {
+
+body {
+    background: rgb(20, 20, 20);
+}
+
+
+ul, li {
     list-style: none;
 }
 
 header {
-    width: 90%;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
 }
 
 
-.logoSection {
-    margin-top: 35px;
+.logo {
+    margin-top: 19px;
+    width: 100px;
+    height: 50px;
+    background-image: url("https://d19a1mtic3m6gl.cloudfront.net/website/_nuxt/WPS-Logo-White.9187634.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.leftSection {
+    display: flex;
 }
 
 .menuSection ul {
-    margin-top: 50px;
+    margin-top: 35px;
     display: flex;
-    border-right: 1px solid lightgray;
 }
-
 .menuSection li {
-    margin-right: 50px;
-    font-size: 20px;
+    color: rgb(207, 211, 252);
+    margin-left: 50px;
+    font-size: 17px;
 }
 
-.menuSection li:hover {
-    font-weight: bold;
-}
-.accountSection ul {
+.rightSection ul {
     display: flex;
 }
 
-.accountSection li {
-    margin-left: 50px;
-    font-size: 20px;
-}
-
-.signUp {
-    margin-top: 40px;
-    width: 100px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    background: #f47825;
+.rightSection li {
+    margin-left: 25px;
     color: white;
+    font-size: 17px;
 }
 
-.myAccount {
-    margin-top: 50px;
-    color: #1f6099;
+.mapSection {
+    margin-top: 35px;
 }
 
+.signSection {
+    margin-top: 30px;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: rgb(82, 141, 250);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
 
-@media all and (max-width:1240px){
-    #menuSection , #accountSection {
+@media all and (max-width:1400px){
+    #rightSection ul {
+        display: none;
+    }
+}
+
+@media all and (max-width: 800px){
+    #menuSection ul {
         display: none;
     }
 }
