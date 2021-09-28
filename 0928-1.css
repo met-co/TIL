@@ -1,0 +1,94 @@
+* {margin: 0; padding: 0;}
+
+ul , li {
+    list-style: none;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Froxima Nova", Arial, sans-serif;
+}
+header {
+    width: 100%;
+    height: 64px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid lightgrey;
+    
+
+}
+
+
+
+.leftSection {
+    display: flex;
+    align-items: center;
+}
+
+
+.logoSection {
+    display: flex;
+    align-items: center;
+}
+
+.logoSection .logoImg {
+    margin-left: 80px;
+}
+
+.logoSection .logoText {
+    color: #2042cf;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+
+.menuSection ul {
+    display: flex;
+}
+
+.menuSection li {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #434343;
+}
+
+.rightSection ul {
+    display: flex;
+    align-items: center;
+}
+
+.rightSection .follow {
+    width: 189px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 20px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #2042cf;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.rightSection .logIn {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #434343;
+    margin-right: 80px;
+
+}
+
+@media all and (max-width:1360px){
+    .menuSection {
+        display: none;
+    }
+}
