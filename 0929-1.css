@@ -1,0 +1,120 @@
+* {margin: 0; padding: 0;}
+
+header {
+    height: 104px;
+    background-color: #d33a2c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.menuSection {
+    display: flex;
+}
+
+.menuSection ul {
+    display: flex;
+}
+.menuSection li {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 21px;
+    margin-left: 20px;
+    line-height: 50px;
+    padding: 10px;
+    text-align: center;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    
+}
+
+.menuSection li:hover {
+    background-color: #aa3126;
+    cursor: pointer;
+}
+
+.cat {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 90px;
+    height: 30px;
+    padding-left: 30px;
+    background-color:#aa3126;
+}
+.cat2 {
+    margin-left: 10px;
+    margin-top: -5px;
+}
+
+.searchSection {
+    display: flex;
+    background-color: white;
+    width: 330px;
+    height: 50px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-align: left;
+    line-height: 50px;
+}
+
+.searchArticles {
+    color: #555454;
+    font-size: 23px;
+}
+
+.search {
+    color: #d35347;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+@media all and (max-width:1245px){
+    .menuSection .membership {
+        display: none;
+    }
+}
+
+@media all and (max-width:1120px){
+    .menuSection .workshop {
+        display: none;
+    }
+
+}
+
+@media all and (max-width:905px){
+    .menuSection .book {
+        display: none;
+    }
+}
+
+@media all and (max-width:840px){
+    .menuSection .guide {
+        display: none;
+    }
+}
+
+@media all and (max-width:685px){
+    .menuSection .article {
+        display: none;
+    }
+}
+
+
+@media all and (max-width:480px){
+    header {
+        flex-wrap: wrap;
+    }
+}
+
